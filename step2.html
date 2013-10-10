@@ -6,10 +6,10 @@
 </head>
 <body>
 
-	<p>允许我问你几个问题，ok?</p>
+	<p>ok!谢谢你的配合！下面请输入你的大名：</p>
 
 	<input type="text" name="" id="answer1" />
-	<button id="b1" onclick="check()">提交答案</button>
+	<button id="b1" onclick="check()">提交</button>
 	
 	
 
@@ -31,8 +31,8 @@
 			}
 			else
 			{
-				getElementById('next').innerHTML="下一关";
-				getElementById('next').href="step2.html";   //这个值为了安全性，应该由服务器返回，如Json
+				getElementById('next').innerHTML="查看你的信息。";
+				getElementById('next').href="http://www.baidu.com/?wd="+aa;   //这个值为了安全性，应该由服务器返回，如Json
 				getElementById('b1').onclick="";   //这个值为了安全性，应该由服务器返回，如Json
 			}		
 		}
