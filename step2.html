@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<p>允许我问你几个问题，ok?</p>
+
+	<input type="text" name="" id="answer1" />
+	<button id="b1" onclick="check()">提交答案</button>
+	
+	
+
+	<a id="next"></a>
+
+
+	<script type="text/javascript">
+	
+	function check()
+	{
+		with(document)		
+		{
+			var aa=getElementById('answer1').value;
+			
+			if(aa !="ok"||aa=="")
+			{
+				alert('please inpu "ok"!');
+				return;
+			}
+			else
+			{
+				getElementById('next').innerHTML="下一关";
+				getElementById('next').href="step2.html";   //这个值为了安全性，应该由服务器返回，如Json
+				getElementById('b1').onclick="";   //这个值为了安全性，应该由服务器返回，如Json
+			}		
+		}
+	}
+	</script>
+</body>
+</html>
